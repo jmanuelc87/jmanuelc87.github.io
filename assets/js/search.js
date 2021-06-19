@@ -1,5 +1,5 @@
 {
-  const SEARCH_BOX_ID = "search-box";
+  const SEARCH_BOX_ID = "search-box-hidden";
   const NO_RESULTS_MESSAGE_ID = "not-found";
   const SEARCH_RESULTS_CONTAINER_ID = "search-results";
   const QUERY_VARIABLE_URL_STRING = "query";
@@ -11,6 +11,7 @@
   }
 
   const setSearchBoxValue = (searchBoxValue) => {
+    // change this to a hidden
     document
       .getElementById(SEARCH_BOX_ID)
       .setAttribute("value", searchBoxValue);

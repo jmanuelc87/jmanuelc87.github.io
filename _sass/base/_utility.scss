@@ -19,7 +19,7 @@
 %padding-sidebar {
   padding: $padding-normal $padding-small * 1.4;
   @media (max-width: 1000px) {
-    padding: $padding-x-small $padding-normal;
+    padding: $padding-small * 1.5 $padding-large / 1.6;
   }
   @media (max-width: 576px) {
     padding: $padding-small;

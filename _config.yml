@@ -20,7 +20,7 @@ theme_settings:
     <br/>
   header_text_feature_image:  assets/img/header_image_cs_2.jpg
   footer_text: >
-    <h4>"The greatest glory in living lies not in never falling, but in rising every time we fall." -Nelson Mandela</h4>
+    <h5>"The greatest glory in living lies not in never falling, but in rising every time we fall." -Nelson Mandela</h5>
 
   # Icons
   rss: true

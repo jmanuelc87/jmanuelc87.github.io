@@ -21,7 +21,18 @@
 // Layout
 .row {
   display: grid;
-  grid-template-columns: 9fr 3fr;
+  width: 100%;
+  grid-template-columns: 8fr 4fr;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 3fr;
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+
+  grid-gap: 1em;
 }
 
 // Post listing
@@ -46,44 +57,44 @@
 
 // search bar
 .search-teaser {
-  padding: 13% 5%;
-  margin-bottom: 0;
+  @extend %padding-sidebar;
   display: inline-block;
+  margin: 0 auto;
+}
 
-  /* --- Search form --- */
-  form.search {
-    border: 0;
-    border-bottom: 2px solid $search-color;
-    outline: 0;
+/* --- Search form --- */
+form.search {
+  border: 0;
+  border-bottom: 2px solid $search-color;
+  outline: 0;
 
-    *:focus {
-      outline: none;
-    }
+  *:focus {
+    outline: none;
+  }
 
-    input {
-      &[type=text] {
-        box-sizing: border-box;
-        border: 0;
-        outline: 0;
-        color: $search-color;
-      }
-
-      &::-moz-placeholder {
-        color: $search-color;
-        opacity: 1;
-      }
-
-      &:-ms-input-placeholder, &::-webkit-input-placeholder {
-        color: $search-color;
-      }
-    }
-
-    button {
-      border: none;
-      font-size: 1.2em;
-      background-color: $brand-color;
+  input {
+    &[type=text] {
+      box-sizing: border-box;
+      border: 0;
+      outline: 0;
       color: $search-color;
     }
+
+    &::-moz-placeholder {
+      color: $search-color;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder, &::-webkit-input-placeholder {
+      color: $search-color;
+    }
+  }
+
+  button {
+    border: none;
+    font-size: 1.2em;
+    background-color: $brand-color;
+    color: $search-color;
   }
 }
 

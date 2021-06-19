@@ -5,6 +5,7 @@
     padding: $padding-x-small $padding-x-small;
   }
 }
+
 %padding-regular {
   padding: $padding-small $padding-large;
   @media (max-width: 1000px) {
@@ -14,6 +15,17 @@
     padding: $padding-small;
   }
 }
+
+%padding-sidebar {
+  padding: $padding-normal $padding-small * 1.4;
+  @media (max-width: 1000px) {
+    padding: $padding-x-small $padding-normal;
+  }
+  @media (max-width: 576px) {
+    padding: $padding-small;
+  }
+}
+
 // Buttons
 .button {
   border-radius: 0.3em;
@@ -22,9 +34,11 @@
   margin: 1em 0;
   padding: 0.5em 0.75em;
 }
+
 a.button {
   @extend .button-link;
 }
+
 .button-link {
   &:hover {
     background: $link-color;
@@ -33,12 +47,14 @@ a.button {
     text-decoration: none;
   }
 }
+
 .body-link {
   &:hover {
     text-decoration: underline;
     color: darken($link-color, 15%);
   }
 }
+
 // States
 .disabled {
   opacity: 0.7;

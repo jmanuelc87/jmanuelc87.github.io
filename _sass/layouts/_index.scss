@@ -3,18 +3,27 @@
   @extend %padding-regular;
   display: inline-block;
   width: 100%;
-  background-color:$header-desc-background-color;
+  background-color: $header-desc-background-color;
   background-size: cover;
   font-size: 1.2em;
   text-align: center;
   color: $header-desc-text-color;
 }
+
 .call-out p:last-child {
   margin-bottom: 0;
 }
+
 .call-out a {
   color: $header-desc-link-color
 }
+
+// Layout
+.row {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+}
+
 // Post listing
 .posts {
   .post-teaser {
@@ -24,21 +33,69 @@
     display: inline-block;
     background-size: $feature-image-size;
     border-bottom: 1px solid $border-color;
+
     p a {
       @extend .body-link;
     }
   }
+
   .excerpt {
     margin-top: 1em;
   }
 }
+
+// search bar
+.search-teaser {
+  padding: 13% 5%;
+  margin-bottom: 0;
+  display: inline-block;
+
+  /* --- Search form --- */
+  form.search {
+    border: 0;
+    border-bottom: 2px solid $search-color;
+    outline: 0;
+
+    *:focus {
+      outline: none;
+    }
+
+    input {
+      &[type=text] {
+        box-sizing: border-box;
+        border: 0;
+        outline: 0;
+        color: $search-color;
+      }
+
+      &::-moz-placeholder {
+        color: $search-color;
+        opacity: 1;
+      }
+
+      &:-ms-input-placeholder, &::-webkit-input-placeholder {
+        color: $search-color;
+      }
+    }
+
+    button {
+      border: none;
+      font-size: 1.2em;
+      background-color: $brand-color;
+      color: $search-color;
+    }
+  }
+}
+
 // Pagination
 .pagination .button {
   margin: 0 1.5em;
+
   i {
     vertical-align: middle;
   }
 }
+
 .pagination {
   padding: $padding-small $padding-large 0 $padding-large;
   text-align: center;
